@@ -1,0 +1,29 @@
+﻿@model List<WebApplication1.Models.Image>
+
+@{
+    ViewBag.Title = "view";
+}
+
+<h2>View image</h2>
+
+@foreach (var image in Model)
+{
+    <div>
+       
+        
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => image.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => image.Title)
+            </dd>
+
+            <dd>
+                <img src="@Url.Content(image.ImagePath)" width="250" height="250" />
+            </dd>
+        </dl>
+    </div>
+}
+

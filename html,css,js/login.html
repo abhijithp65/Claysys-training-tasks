@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Login Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {
+
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+  }
+    header {
+            background-color: #0cdef1;          
+            color: #000000;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;    
+        }
+        .h {
+            font-size: 20px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        .content {
+            padding: 30px;
+            text-align: justify;
+            margin-top: 50px;
+            margin-bottom: 20px; 
+           
+        }
+        
+    footer {
+            background-color: #0cdef1;
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 20px;
+        }
+
+  .login-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+
+  .login-container h2 {
+    margin-top: 0;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    
+  }
+
+  .form-group input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .form-group input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  .form-group.remember-forgot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  .form-group.remember-forgot label {
+   position: absolute;
+   left: 38%;
+    text-align: left;
+  }
+.form-group.remember-forgot a {
+  position: absolute;
+   left: 54%;
+    
+  }
+ 
+ 
+
+</style>
+
+</head>
+<body>
+  <header>
+    <div class="h">
+      <h2>Sign In</h2>
+    </div>
+    
+    <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+       
+    </ul>
+    </nav>
+    
+</header>
+  <div class="login-container">
+    <h2 style="text-align:center;">Login</h2>
+    
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <p id="emailError" style="color: red;"></p>
+        
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <p id="passwordError" style="color: red;"></p>
+      </div>
+      <div class="form-group remember-forgot">
+        
+       <a href="forgot_password.html">Forgot Password?</a>
+       
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Login" onclick="validateLoginForm()">
+      </div>
+    </form>
+    <p>Don't have an account? <a href="registration.html">Sign up</a></p>
+  </div>
+  <footer>
+    <p>&copy; 2023 portfolio Inc. All rights reserved.</p>
+</footer>
+<script src="loginFormValidation.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0cdef1;          
+            color: #000000;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;    
+        }
+        .h {
+            font-size: 20px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        .content {
+            padding: 30px;
+            text-align: justify;
+            margin-top: 50px;
+            margin-bottom: 20px; 
+           
+        }
+        
+        footer {
+            background-color: #0cdef1;
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 20px;
+        }
+
+        .registration-form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .registration-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .registration-form label {
+            display: block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .registration-form input,
+        .registration-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+       
+        .registration-form .gender-group label {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 30px;
+        }
+        
+        .registration-form .input-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .registration-form button {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="h">
+      <h2>Sign Up</h2>
+    </div>
+    
+    <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Sign In</a></li>
+       
+    </ul>
+    </nav>
+    
+</header>
+<div class="content">
+    <form class="registration-form">
+        
+        <div class="input-group">
+          <div>
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required onfocusout="validateField(this)">
+            <span class="error-message"></span>
+          </div>
+            <div>
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required onfocusout="validateField(this)">
+                <span class="error-message"></span>
+            </div> 
+        </div>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required onfocusout="validateField(this)">
+        <span class="error-message"></span>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required onfocusout="validateField(this)">
+        <span class="error-message"></span>
+
+        <div class="gender-group">
+            <label>Gender:</label>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
+        </div>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required onfocusout="validateField(this)">
+        <span class="error-message"></span>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required onfocusout="validateField(this)">
+        <span class="error-message"></span>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required onfocusout="validateField(this)">
+        <span class="error-message"></span>
+
+        <div class="input-group">
+            <div>
+                <label for="state">State:</label>
+                <select id="state" name="state" required onchange="updateCities()" onfocusout="validateField(this)">
+                  <span class="error-message"></span>
+                    <option value="">Select State</option>
+                    <option value="state1">Kannur</option>
+                    <option value="state2">Eranakulam</option>
+                </select>
+            </div>
+            <div>
+                <label for="city">City:</label>
+                <select id="city" name="city" required onfocusout="validateField(this)">
+                  <span class="error-message"></span>
+                    <option value="">Select City</option>
+                </select>
+            </div>
+        </div>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required onfocusout="validateField(this)">
+        <span class="error-message"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required onfocusout="validateField(this)">
+        <span class="error-message"></span>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required onfocusout="validateField(this)">
+        <span class="error-message"></span>
+
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+
+
+<script>
+    //state
+    const citiesByState = {
+      state1: ["Kannur1", "kannur2", "Kannur3"],
+      state2: ["Kochi1", "Kochi2", "Kochi3"],
+  };
+
+  function updateCities() {
+      const stateSelect = document.getElementById("state");
+      const citySelect = document.getElementById("city");
+      const selectedState = stateSelect.value;
+
+      citySelect.innerHTML = ""; 
+
+      if (selectedState === "") {
+          citySelect.innerHTML = '<option value="">Select City</option>';
+      } else {
+          const cities = citiesByState[selectedState];
+          for (const city of cities) {
+              const option = document.createElement("option");
+              option.value = city;
+              option.textContent = city;
+              citySelect.appendChild(option);
+          }
+      }
+  }
+
+    //field
+      function validateField(inputElement) {
+          const value = inputElement.value.trim();
+          const errorMessage = inputElement.nextElementSibling;
+
+          if (value === "") {
+              errorMessage.textContent = "*This field is required*";
+          } else {
+              errorMessage.textContent = "";
+          }
+      }
+  </script>
+
+   <footer>
+    <p>&copy; 2023 portfolio Inc. All rights reserved.</p>
+</footer>
+</body>
+</html>

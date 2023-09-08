@@ -1,0 +1,128 @@
+﻿@model WebApplication1.Models.UserModel
+
+@{
+    ViewBag.Title = "User Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; 
+
+    }
+   
+    .form-group {
+        margin-bottom: 10px; 
+    }
+
+    .form-label {
+        display: inline-block;
+        width: 120px; 
+        text-align: right; 
+        margin-right: 10px; 
+    }
+
+    .form-input {
+        width: 300px; 
+    }
+    .button-container {
+        text-align: center;
+    }
+</style>
+
+<div class="center-content">
+    <h2>Single Stored Procedure</h2><br />
+
+    @using (Html.BeginForm("Register", "Registration", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            <label for="FirstName" class="form-label">First Name:</label>
+            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="form-group">
+            <label for="LastName" class="form-label">Last Name:</label>
+            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="form-group">
+            <label for="DateOfBirth" class="form-label">Date of Birth:</label>
+            @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.DateOfBirth)
+        </div>
+
+        <div class="form-group">
+            <label for="Age" class="form-label">Age:</label>
+            @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.Age)
+        </div>
+
+        <div class="form-group">
+            <label for="Gender" class="form-label">Gender:</label>
+            @Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.Gender)
+        </div>
+
+        <div class="form-group">
+            <label for="PhoneNumber" class="form-label">Phone Number:</label>
+            @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.PhoneNumber)
+        </div>
+
+        <div class="form-group">
+            <label for="Email" class="form-label">Email:</label>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="form-group">
+            <label for="Address" class="form-label">Address:</label>
+            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+
+        <div class="form-group">
+            <label for="State" class="form-label">State:</label>
+            @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.State)
+        </div>
+
+        <div class="form-group">
+            <label for="City" class="form-label">City:</label>
+            @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.City)
+        </div>
+
+        <div class="form-group">
+            <label for="Username" class="form-label">Username:</label>
+            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.Username)
+        </div>
+
+        <div class="form-group">
+            <label for="Password" class="form-label">Password:</label>
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-input" } })
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+        <br />
+        <div class="button-container">
+            <input type="submit" name="action" value="Insert" class="btn btn-primary" />
+            <input type="submit" name="action" value="View" class="btn btn-secondary" />
+            <input type="submit" name="action" value="Delete" class="btn btn-danger" />
+            <input type="submit" name="action" value="Update" class="btn btn-warning" />
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(ViewBag.Message))
+    {
+        <p>@ViewBag.Message</p>
+    }
+</div>

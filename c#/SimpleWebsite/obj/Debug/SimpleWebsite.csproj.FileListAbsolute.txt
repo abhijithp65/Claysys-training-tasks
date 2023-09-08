@@ -1,0 +1,13 @@
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\obj\Debug\SimpleWebsite.csproj.AssemblyReference.cache
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\obj\Debug\SimpleWebsite.Form1.resources
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\obj\Debug\SimpleWebsite.Properties.Resources.resources
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\obj\Debug\SimpleWebsite.csproj.GenerateResource.cache
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\obj\Debug\SimpleWebsite.csproj.CoreCompileInputs.cache
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\bin\Debug\SimpleWebsite.exe.config
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\bin\Debug\SimpleWebsite.exe
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\bin\Debug\SimpleWebsite.pdb
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\obj\Debug\SimpleWebsite.exe
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\obj\Debug\SimpleWebsite.pdb
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\obj\Debug\SimpleWebsite.Form2.resources
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\obj\Debug\SimpleWebsite.Form3.resources
+C:\Users\ABHIJITH P\Desktop\phase-1\c#\SimpleWebsite\SimpleWebsite\obj\Debug\SimpleWebsite.Form4.resources
